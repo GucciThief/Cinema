@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieTime - Film Recensies</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Laat je recensie achter voor de films die je hebt gezien bij MovieTime.">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="MovieTime Logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="vestigingen.html">Vestigingen</a></li>
+                <li><a href="film-recensies.html">Film Recensies</a></li>
+                <li><a href="films.html">Films</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Laat een Recensie Achter</h1>
+        
+        <section class="review-section">
+            <div class="left-panel">
+                <h2>Beschikbare Film</h2>
+                <div class="movie">
+                    <img id="movie-poster" src="images/movie1.jpg" alt="Movie Poster">
+                    <form onsubmit="showThankYouPopup(event)">
+                        <label for="film-select">Kies een film:</label>
+                        <select id="film-select" onchange="updateMoviePoster()">
+                            <option value="movie1">Film Titel 1</option>
+                            <option value="movie2">Film Titel 2</option>
+                            <option value="movie3">Film Titel 3</option>
+                            <option value="movie4">Film Titel 4</option>
+                            <option value="movie5">Film Titel 5</option>
+                            <option value="movie6">Film Titel 6</option>
+                            <option value="movie7">Film Titel 7</option>
+                            <option value="movie8">Film Titel 8</option>
+                            <option value="movie9">Film Titel 9</option>
+                            <option value="movie10">Film Titel 10</option>
+                        </select>
+                        
+                        <label for="rating1">Beoordeel de film:</label>
+                        <select id="rating1">
+                            <option value="1">1 Ster</option>
+                            <option value="2">2 Sterren</option>
+                            <option value="3">3 Sterren</option>
+                            <option value="4">4 Sterren</option>
+                            <option value="5">5 Sterren</option>
+                        </select>
+                        
+                        <textarea placeholder="Schrijf je recensie hier..." rows="3"></textarea>
+                        <button type="submit">Verstuur Recensie</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <h2>Laatste Recensies</h2>
+                <div class="review">
+                    <p><strong>Film:</strong> Movie 1</p>
+                    <p><strong>Beoordeling:</strong> ★★★★☆</p>
+                    <p><strong>Recensie:</strong> Geweldige film, echt een aanrader!</p>
+                </div>
+                <div class="review">
+                    <p><strong>Film:</strong> Movie 2</p>
+                    <p><strong>Beoordeling:</strong> ★★★☆☆</p>
+                    <p><strong>Recensie:</strong> Goed verhaal, maar het einde viel wat tegen.</p>
+                </div>
+                <div class="review">
+                    <p><strong>Film:</strong> Movie 3</p>
+                    <p><strong>Beoordeling:</strong> ★★★★☆</p>
+                    <p><strong>Recensie:</strong> Spannend van begin tot eind!</p>
+                </div>
+                <div class="discount-code">
+                    <p><strong>Gefeliciteerd!</strong> Je hebt 10% korting. Gebruik de code: MOVIETIME10</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MovieTime Cinema. Alle rechten voorbehouden.</p>
+    </footer>
+
+    <div id="thank-you-popup" class="thank-you-popup">
+        <p>Bedankt voor je recensie!</p>
+    </div>
+
+    <script>
+        function updateMoviePoster() {
+            const movieSelect = document.getElementById('film-select');
+            const moviePoster = document.getElementById('movie-poster');
+            const selectedMovie = movieSelect.value;
+
+            const movieImages = {
+                movie1: 'images/movie1.jpg',
+                movie2: 'images/movie2.jpg',
+                movie3: 'images/movie3.jpg',
+                movie4: 'images/movie4.jpg',
+                movie5: 'images/movie5.jpg',
+                movie6: 'images/movie6.jpg',
+                movie7: 'images/movie7.jpg',
+                movie8: 'images/movie8.jpg',
+                movie9: 'images/movie9.jpg',
+                movie10: 'images/movie10.jpg'
+            };
+
+            moviePoster.src = movieImages[selectedMovie];
+        }
+
+        function showThankYouPopup(event) {
+            event.preventDefault(); // Voorkom het standaard formulier verzenden
+            const popup = document.getElementById('thank-you-popup');
+            popup.style.display = 'block';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 3000); // Verberg de popup na 3 seconden
+        }
+    </script>
+
+</body>
+</html>

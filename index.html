@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieTime - Luxe Bioscoopervaring en Nieuwste Films</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="MovieTime is de plek waar je kunt genieten van de nieuwste films in een luxe bioscoopomgeving.">
+    <link rel="canonical" href="https://www.movietime.nl/index.html">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="MovieTime Logo" style="height: 50px; width: auto;">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="vestigingen.html">Vestigingen</a></li>
+                <li><a href="film-recensies.html">Film Recensies</a></li>
+                <li><a href="films.html">Films</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welkom bij MovieTime</h1>
+        <section class="welcome">
+            <h2>Geniet van de Nieuwste Films</h2>
+            <p>MovieTime is de plek waar je kunt genieten van de nieuwste films in een luxe bioscoopomgeving. Met zes vestigingen door heel Nederland bieden we een unieke filmervaring voor iedereen.</p>
+            <p>Ontdek onze <a href="vestigingen.html">vestigingen</a>, laat je <a href="film-recensies.html">recensie</a> achter, en geniet van de <a href="films.html">beste films</a>!</p>
+        </section>
+
+        <section class="highlights">
+            <h2>Waarom kiezen voor MovieTime?</h2>
+            <ul>
+                <li>Moderne bioscoopzalen met comfortabele stoelen</li>
+                <li>Een breed aanbod van films, van blockbusters tot indie-films</li>
+                <li>Speciale kortingsacties en evenementen</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MovieTime Cinema. Alle rechten voorbehouden.</p>
+    </footer>
+
+    <script>
+        // Toggle the navigation menu on mobile
+        document.querySelector('.hamburger-menu').addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
